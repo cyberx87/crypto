@@ -1,0 +1,1120 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ix_inversors_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-16 19:26+0000\n"
+"PO-Revision-Date: 2022-01-16 14:35-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Language: es\n"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_tree
+msgid "$ Available"
+msgstr "S Disponible"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_gain
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__amount_gain
+msgid "$ Wined"
+msgstr "$ Ganado"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid ""
+"<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
+"                                    <b>Address</b>\n"
+"                                </span>"
+msgstr ""
+"<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
+"                                    <b>Dirección</b>\n"
+"                                </span>"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_config_wizard_form
+msgid ""
+"<span>Update all inversion and recalculate all inversion data.</span>\n"
+"                    <span>Register all dates payment for all inversion after "
+"valid creation date for each inversion</span>"
+msgstr ""
+"<span>Actualiza todas las inversiones y recalcula los datos de inversión.</"
+"span>\n"
+"                    <span>Registra todas las fechas de pagos de las "
+"inversiones después de la creación de cada una.</span>"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__active
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__active
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__active
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Add Binary Bonus"
+msgstr "Adicionar Bono Binario"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Add Daily Bonus"
+msgstr "Adicionar Bono Diario"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Add Payout"
+msgstr "Adicionar Pago"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Add Sponsor Commission"
+msgstr "Adicionar Comisión de Patrocinador"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_plan
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__amount
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__amount_plan
+msgid "Amount"
+msgstr "Saldo"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_maximum
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__amount_maximum
+msgid "Amount Maximum"
+msgstr "Saldo Máximo"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__amount_total
+msgid "Amount Total"
+msgstr "Saldo Total"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__amount_type
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+msgid "Amount Type"
+msgstr "Tipo de Saldo"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,help:ix_inversors_account.field_ix_inversion_line__amount_total
+msgid "Amount withing any commission"
+msgstr "Saldo sin comisiones"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_crypto_exchange_form
+msgid "Any description here..."
+msgstr "Cualquier descripción aquí..."
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_plan_form
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_search
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Available (-)"
+msgstr "Disponible(-)"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_available
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__amount_available
+msgid "Available Amount"
+msgstr "Saldo Disponible"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_can_pay
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__amount_can_pay
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_search
+msgid "Available Payment"
+msgstr "Pago Disponible"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion__payment_type__btc
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_plan__payment_type__btc
+msgid "BTC"
+msgstr "BTC"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_binary
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion_line__amount_type__binary_bonus
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+msgid "Binary Bonus"
+msgstr "Bono Binario"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__tree_branch
+msgid "Binary Tree Branch"
+msgstr "Rama del Árbol Binario"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__birthdate
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_partner__birthdate
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_users__birthdate
+msgid "Birthdate"
+msgstr "Fecha de Nacimiento"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_config_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__city
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "City"
+msgstr "Ciudad"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__parent_id
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_search
+msgid "Coach"
+msgstr "Patrocinador"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.ix_user_kanban_view
+msgid "Coach:"
+msgstr "Patrocinador:"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__color
+msgid "Color"
+msgstr "Color"
+
+#. module: ix_inversors_account
+#: model:ir.actions.act_window,name:ix_inversors_account.ix_config_wizard_action
+#: model:ir.ui.menu,name:ix_inversors_account.config_wizard
+#: model:ir.ui.menu,name:ix_inversors_account.menu_configuration
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: ix_inversors_account
+#: model:ir.model,name:ix_inversors_account.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__country_id
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "Country"
+msgstr "Pais"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "Create Inversion"
+msgstr "Crear Inversión"
+
+#. module: ix_inversors_account
+#: model:ir.actions.act_window,name:ix_inversors_account.action_ix_inversion_line_all
+msgid "Create Payout"
+msgstr "Crear Pago"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_user.py:0
+#, python-format
+msgid "Create Plan"
+msgstr "Crear Plan"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_config_wizard__create_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_currency__create_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_exchange__create_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet__create_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__create_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__create_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__create_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__create_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_config_wizard__create_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_currency__create_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_exchange__create_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet__create_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__create_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__create_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__create_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__create_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__amount_credit
+msgid "Credit"
+msgstr "Crédito"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__amount_credit_str
+msgid "Credit ($)"
+msgstr "Crédito ($)"
+
+#. module: ix_inversors_account
+#: model:ir.ui.menu,name:ix_inversors_account.menu_configuration_crypto
+msgid "Crypto Configuration"
+msgstr "Configuración Crypto"
+
+#. module: ix_inversors_account
+#: model:ir.ui.menu,name:ix_inversors_account.menu_crypto_currency
+msgid "Crypto Currencies"
+msgstr "Crypto Monedas"
+
+#. module: ix_inversors_account
+#: model:ir.actions.act_window,name:ix_inversors_account.action_ix_crypto_currency
+#: model:ir.model,name:ix_inversors_account.model_ix_crypto_currency
+msgid "Crypto Currency"
+msgstr "Crypto Moneda"
+
+#. module: ix_inversors_account
+#: model:ir.actions.act_window,name:ix_inversors_account.action_ix_crypto_exchange
+#: model:ir.model,name:ix_inversors_account.model_ix_crypto_exchange
+#: model:ir.ui.menu,name:ix_inversors_account.menu_crypto_exchange
+msgid "Crypto Exchange"
+msgstr "Exchange Crypto"
+
+#. module: ix_inversors_account
+#: model:ir.actions.act_window,name:ix_inversors_account.action_ix_crypto_wallet
+#: model:ir.model,name:ix_inversors_account.model_ix_crypto_wallet
+msgid "Crypto Wallet"
+msgstr "Billetera Crypto"
+
+#. module: ix_inversors_account
+#: model:ir.ui.menu,name:ix_inversors_account.menu_crypto_wallet
+msgid "Crypto Wallets"
+msgstr "Billeteras Crypto"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet__currency_id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__currency_id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__currency_id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__currency_id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__currency_id
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_crypto_wallet_search
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__active_inversion_id
+msgid "Current Inversion"
+msgstr "Inversión Actual"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_daily
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion_line__amount_type__daily_bonus
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+msgid "Daily Bonus"
+msgstr "Bono Diario"
+
+#. module: ix_inversors_account
+#: model:ir.actions.act_window,name:ix_inversors_account.action_ix_daily_payment
+#: model:ir.ui.menu,name:ix_inversors_account.menu_ix_daily_payment
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_daily_payment_calendar
+msgid "Daily Payment"
+msgstr "Pago Diario"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__date_date
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_daily_payment_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_form
+msgid "Date"
+msgstr "Fecha"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__amount_debit
+msgid "Debit"
+msgstr "Débito"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__amount_debit_str
+msgid "Debit ($)"
+msgstr "Débito ($)"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__amount_payment_fee
+msgid "Debit Fee"
+msgstr "Comisión de retiro"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_exchange__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_config_wizard__display_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_exchange__display_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__display_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__display_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__display_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__display_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion_line__state_payment__done
+msgid "Done"
+msgstr "Realizado"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__email
+msgid "Email"
+msgstr "Correo Electrónico"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet__exchange_id
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_crypto_wallet_search
+msgid "Exchange"
+msgstr "Exchange"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__lastname_father
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_partner__lastname_father
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_users__lastname_father
+msgid "Father Lastname"
+msgstr "Apellido Paterno"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Finances"
+msgstr "Finanzas"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__user_from
+msgid "From User"
+msgstr "Del Usuario"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.ix_inversion_kanban_view
+msgid "Gained:"
+msgstr "Ganado"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_crypto_wallet_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_daily_payment_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_config_wizard__id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_currency__id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_exchange__id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet__id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.ix_info_view_partner_form
+msgid "IX Info"
+msgstr "Info de IX"
+
+#. module: ix_inversors_account
+#: model:ir.ui.menu,name:ix_inversors_account.menu_main
+msgid "IX-Inversors"
+msgstr "IX-Inversors"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__identifier
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_partner__identifier
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_users__identifier
+msgid "Identifier"
+msgstr "Identificador"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__image_1920
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__image_1920
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__user_image_1920
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__image_1920
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__image_1920
+msgid "Image"
+msgstr "Foto"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__image_1024
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__image_1024
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__image_1024
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__image_1024
+msgid "Image 1024"
+msgstr "Foto 1024"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__image_128
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__image_128
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__user_image_128
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__image_128
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__image_128
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__inversion_image_128
+msgid "Image 128"
+msgstr "Foto 128"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__image_256
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__image_256
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__image_256
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__image_256
+msgid "Image 256"
+msgstr "Foto 256"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__image_512
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__image_512
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__image_512
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__image_512
+msgid "Image 512"
+msgstr "Foto 512"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__imported
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__imported
+msgid "Imported"
+msgstr "Importado"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_inversion.py:0
+#, python-format
+msgid ""
+"Invalid Inversion for user \"%s\". You must to create a valid Inversion first"
+msgstr ""
+"Inversión inválida para el usuario \"%s\". Debe crear una inversión válida "
+"primeramente para este usuario"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__inversion_id
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+msgid "Inversion"
+msgstr "Inversión"
+
+#. module: ix_inversors_account
+#: model:ir.ui.menu,name:ix_inversors_account.menu_inversion_line
+msgid "Inversion Lines"
+msgstr "Líneas de Inversión"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_view_graph
+msgid "Inversion Stats"
+msgstr "Estadísticas de Inversión"
+
+#. module: ix_inversors_account
+#: model:ir.actions.act_window,name:ix_inversors_account.action_ix_inversion
+#: model:ir.actions.act_window,name:ix_inversors_account.action_ix_inversion_line
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__line_ids
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__inversion_ids
+#: model:ir.ui.menu,name:ix_inversors_account.menu_inversion
+#: model:ir.ui.menu,name:ix_inversors_account.menu_inversion_main
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_calendar
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "Inversions"
+msgstr "Inversiones"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_pivot
+msgid "Inversions Analysis"
+msgstr "Análisis de Inversiones"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_pivot
+msgid "Inversions Lines Analysis"
+msgstr "Líneas de análisis de inversiones"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__amount_is_debit
+msgid "Is Debit"
+msgstr "Es un débito"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_config_wizard____last_update
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_currency____last_update
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_exchange____last_update
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet____last_update
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment____last_update
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion____last_update
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line____last_update
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan____last_update
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user____last_update
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_config_wizard__write_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_currency__write_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_exchange__write_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet__write_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__write_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__write_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__write_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__write_uid
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__write_uid
+msgid "Last Updated by"
+msgstr "Última modificación por"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_config_wizard__write_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_currency__write_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_exchange__write_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet__write_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__write_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__write_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__write_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__write_date
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__write_date
+msgid "Last Updated on"
+msgstr "Última modificación el"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_user__tree_branch__left
+msgid "Left"
+msgstr "Izquierda"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.ix_inversion_kanban_view
+msgid "Left:"
+msgstr "Izquierda:"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_config_wizard_form
+msgid "Main Config Settings"
+msgstr "Ajustes Principales"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__lastname_mother
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_partner__lastname_mother
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_users__lastname_mother
+msgid "Mother Lastname"
+msgstr "Apellido Materno"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_currency__display_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_currency__name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_exchange__name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet__display_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet__name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__display_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__user_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_partner__user_name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_users__user_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_crypto_currency_form
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_crypto_exchange_form
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_crypto_wallet_form
+msgid "Name..."
+msgstr "Nombre..."
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "Network"
+msgstr "Red"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__inversion_count
+msgid "Operations"
+msgstr "Operaciones"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__user_owner_id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__owner_id
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_search
+msgid "Owner"
+msgstr "Propietario"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.ix_user_kanban_view
+msgid "Owner:"
+msgstr "Propierario"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Parent Payouts (+)"
+msgstr "Pagos Anteriores (+)"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_payout_parent
+msgid "Parent Payouts Released"
+msgstr "Pagos Anteriores Realizados"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__partner_id
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_search
+msgid "Partner"
+msgstr "Padre"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_wallet__path
+msgid "Path"
+msgstr "Ruta"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_daily_payment__name
+msgid "Payment %"
+msgstr "% Pago"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__state_payment
+msgid "Payment State"
+msgstr "Estado de Pago"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__payment_type
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__payment_type
+msgid "Payment Type"
+msgstr "Tipo de Pago"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_payment_per
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__amount_payment_per
+msgid "Payments %"
+msgstr "% Pagos"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Payout Fee (-)"
+msgstr "Comisión de Pago (-)"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+msgid "Payout Pending"
+msgstr "Pago Pendiente"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion_line__amount_type__payout_released
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+msgid "Payout Released"
+msgstr "Pago Realizado"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_payout_fee
+msgid "Payouts Fee"
+msgstr "Comisión de Pago"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_payout
+msgid "Payouts Released"
+msgstr "Pagos Realizados"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion_line__amount_type__pending
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion_line__state_payment__pending
+msgid "Pending"
+msgstr "Pendiente"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__plan_id
+msgid "Plan"
+msgstr "Plan"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Plan Purchase (-)"
+msgstr "Compra de Plan (-)"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_plan_form
+msgid "Plan name..."
+msgstr "Nombre de plan..."
+
+#. module: ix_inversors_account
+#: model:ir.actions.act_window,name:ix_inversors_account.action_ix_plan
+#: model:ir.ui.menu,name:ix_inversors_account.menu_plan
+msgid "Plans"
+msgstr "Planes"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__parent_id
+msgid "Previous Inversion"
+msgstr "Inversión Anterior"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_search
+msgid "Purchase Plan"
+msgstr "Plan de Compra"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_plan_purchase_fee
+msgid "Purchase fee"
+msgstr "Comisión de compra"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Ready to Payment"
+msgstr "Listo para el Pago"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_error
+msgid "Reduced Fee"
+msgstr "Comisión reducida"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Reduced Fee (-)"
+msgstr "Comisión reducida (-)"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion_line__amount_type__rejected
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_inversion.py:0
+#, python-format
+msgid ""
+"Review all lines or delete all before importing its because are some "
+"repeated lines."
+msgstr ""
+"Revise todas las líneas o elimínelas todas antes de importar los datos si ve "
+"que existen elementos repetidos."
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_user__tree_branch__right
+msgid "Right"
+msgstr "Derecha"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__same_plan_count
+msgid "Same plan count"
+msgstr "Cantidad del mismo plan"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_currency__short_name
+msgid "Short Name"
+msgstr "Siglas"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion_line__amount_type__sponsor_commission
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+msgid "Sponsor Commission"
+msgstr "Comisión de Patrocinador"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_sponsor
+msgid "Sponsor Commissions"
+msgstr "Comisiones de Patrocinador"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion__type__start
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_plan__type__start
+msgid "Start"
+msgstr "Inicial"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__date_start
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__state_id
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "State"
+msgstr "Estado"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__street
+msgid "Street"
+msgstr "Calle"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "Street 2..."
+msgstr "Calle 2..."
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "Street..."
+msgstr "Calle..."
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__street2
+msgid "Street2"
+msgstr "Calle2"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_daily_payment.py:0
+#, python-format
+msgid "The Amount must be greater than 0!"
+msgstr "¡El valortiene que ser mayor que cero!"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_inversion.py:0
+#, python-format
+msgid "The Binary Bonus credit most be greater than zero (> 0)!"
+msgstr "El saldo de Bono Binario debe ser mayo que cero (> 0)!"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_inversion.py:0
+#, python-format
+msgid "The Payout debit most be greater than zero (> 0)!"
+msgstr "El Pago tiene que ser mayor que cero (> 0)!"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_inversion.py:0
+#, python-format
+msgid "The Sponsor Commission credit most be greater than zero (> 0)!"
+msgstr ""
+"El saldo por Comisión de Patrocinador tiene que ser mayor que cero (> 0)!"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_inversion.py:0
+#, python-format
+msgid "The daily bonus credit most be greater than zero (> 0)!"
+msgstr "El saldo de Bono Diario tiene que ser mayor que cero (> 0)!"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_inversion.py:0
+#, python-format
+msgid ""
+"The daily bonus payment is already registered. Is available only one per day!"
+msgstr ""
+"¡El pago del bono diario ya se encuentra registrado. Solo se puede registrar "
+"uno por día!"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_daily_payment.py:0
+#, python-format
+msgid "The date must be lower or equals to today date!"
+msgstr "¡La fecha tiene que ser menor o igual que la fecha de hoy!"
+
+#. module: ix_inversors_account
+#: model:ir.model.constraint,message:ix_inversors_account.constraint_ix_crypto_currency_short_name_unique
+msgid "This currency already exists!"
+msgstr "¡Esta moneda ya existe!"
+
+#. module: ix_inversors_account
+#: model:ir.model.constraint,message:ix_inversors_account.constraint_ix_daily_payment_unique_date
+msgid "This date already registered!"
+msgstr "¡Esta fecha ya fue registrada!"
+
+#. module: ix_inversors_account
+#: model:ir.model.constraint,message:ix_inversors_account.constraint_ix_crypto_exchange_name_unique
+msgid "This exchange already exists!"
+msgstr "¡Esta exchange ya está registrada!"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_config_wizard_form
+msgid ""
+"This operation override all dates payment. Do you still want to proceed?"
+msgstr "Esta operación actualiza todos los pagos diarios. ¿Desea continuar?"
+
+#. module: ix_inversors_account
+#: model:ir.model.constraint,message:ix_inversors_account.constraint_ix_crypto_wallet_path_unique
+msgid "This path already exists in other wallet!"
+msgstr "¡Esta ruta ya pertenece a una wallet!"
+
+#. module: ix_inversors_account
+#: model:ir.model.constraint,message:ix_inversors_account.constraint_ix_user_unique_name
+#: model:ir.model.constraint,message:ix_inversors_account.constraint_res_partner_user_unique
+msgid "This user already exists!"
+msgstr "¡Este usuario ya existe!"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_daily_payment_form
+msgid "Today Payment % (Ex: 1.0)"
+msgstr "Pago de Hoy (%)"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Total"
+msgstr "Total"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_tree
+msgid "Total Debit"
+msgstr "Débito Total"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_total_left
+msgid "Total Left Payments"
+msgstr "Total sin Pagar"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_total_payment
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__amount_total_payment
+msgid "Total Payments"
+msgstr "Pagos Totales"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_total_payment_before
+msgid "Total Payments Before"
+msgstr "Pagos Totales Anteriores"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__amount_plan_purchase
+msgid "Total Plan Purchase"
+msgstr "Compra de Planes"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__type
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion__payment_type__usdt_trc20
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_plan__payment_type__usdt_trc20
+msgid "USDT (trc20)"
+msgstr "USDT (trc20)"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_config_wizard_form
+msgid "Update All Payment"
+msgstr "Actualizar Todos los Pagos"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_form
+msgid "Update Daily Payments"
+msgstr "Actualizar Pagos Diarios"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_config_wizard_form
+msgid "Update Inversion Data"
+msgstr "Actualizar Datos de Inversion"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_daily_payment_form
+msgid "Update Payment"
+msgstr "Actualizar Pagos"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_inversion__type__upgrade
+#: model:ir.model.fields.selection,name:ix_inversors_account.selection__ix_plan__type__upgrade
+msgid "Upgrade"
+msgstr "Actualización"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "Upgrade Inversion"
+msgstr "Actualizar Inversión"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion__user_id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_plan__user_id
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__name
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_partner__user
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_users__user
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_search
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "User"
+msgstr "Usuario"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_inversion_line_search
+msgid "User From"
+msgstr "De Usuario"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_inversion_line__user_id
+msgid "Username"
+msgstr "Nombre de Usuario"
+
+#. module: ix_inversors_account
+#: model:ir.actions.act_window,name:ix_inversors_account.action_ix_user
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_partner__ix_user_ids
+#: model:ir.model.fields,field_description:ix_inversors_account.field_res_users__ix_user_ids
+#: model:ir.ui.menu,name:ix_inversors_account.menu_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_crypto_exchange__wallet_ids
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__wallet_ids
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_crypto_exchange_form
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "Wallets"
+msgstr "Billeteras"
+
+#. module: ix_inversors_account
+#: code:addons/ix_inversors_account/models/ix_daily_payment.py:0
+#, python-format
+msgid "You cannot register payment in weekend day!"
+msgstr "¡No se puede registrar un pago un día de fin de semana!"
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "Your team branch..."
+msgstr "Rama de equipo..."
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "Your team coach..."
+msgstr "Patrocinador de equipo..."
+
+#. module: ix_inversors_account
+#: model_terms:ir.ui.view,arch_db:ix_inversors_account.view_ix_user_form
+msgid "ZIP"
+msgstr "CP"
+
+#. module: ix_inversors_account
+#: model:ir.model.fields,field_description:ix_inversors_account.field_ix_user__zip
+msgid "Zip"
+msgstr "C.P"
+
+#. module: ix_inversors_account
+#: model:ir.model,name:ix_inversors_account.model_ix_config_wizard
+msgid "ix.config.wizard"
+msgstr ""
+
+#. module: ix_inversors_account
+#: model:ir.model,name:ix_inversors_account.model_ix_daily_payment
+msgid "ix.daily.payment"
+msgstr ""
+
+#. module: ix_inversors_account
+#: model:ir.model,name:ix_inversors_account.model_ix_inversion
+msgid "ix.inversion"
+msgstr ""
+
+#. module: ix_inversors_account
+#: model:ir.model,name:ix_inversors_account.model_ix_inversion_line
+msgid "ix.inversion.line"
+msgstr ""
+
+#. module: ix_inversors_account
+#: model:ir.model,name:ix_inversors_account.model_ix_plan
+msgid "ix.plan"
+msgstr ""
+
+#. module: ix_inversors_account
+#: model:ir.model,name:ix_inversors_account.model_ix_user
+msgid "ix.user"
+msgstr ""

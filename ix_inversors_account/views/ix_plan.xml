@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Res partner efo-->
+        <record id="view_ix_plan_search" model="ir.ui.view">
+            <field name="name">ix.plan.search</field>
+            <field name="model">ix.plan</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_ix_plan_tree" model="ir.ui.view">
+            <field name="name">ix.plan.form</field>
+            <field name="model">ix.plan</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="active"/>
+                    <field name="amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ix_plan_form" model="ir.ui.view">
+            <field name="name">ix.plan.form</field>
+            <field name="model">ix.plan</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                        <field name="image_1920" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_128&quot;}"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" class="oe_inline" default_focus="1" placeholder="Plan name..."/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="amount"/>
+                                <field name="currency_id"/>
+                            </group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Partner Kanban View -->
+        <record id="ix_plan_kanban_view" model="ir.ui.view">
+            <field name="name">ix.plan.kanban</field>
+            <field name="model">ix.plan</field>
+            <field name="arch" type="xml">
+                <kanban class="o_res_partner_kanban" sample="1">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="amount"/>
+                    <field name="currency_id"/>
+                    <field name="active"/>
+                    <field name="image_128"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban">
+                                <t t-set="placeholder" t-value="'/base/static/img/company_image.png'"/>
+                                <div class="o_kanban_image_fill_left o_kanban_image_full" t-attf-style="background-image: url(#{kanban_image('ix.plan', 'image_128', record.id.raw_value, placeholder)})" role="img"/>
+                                <div class="oe_kanban_details d-flex flex-column">
+                                    <strong class="o_kanban_record_title oe_partner_heading"><field name="name"/></strong>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="action_ix_plan" model="ir.actions.act_window">
+            <field name="name">Plans</field>
+            <field name="res_model">ix.plan</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+    </data>
+</odoo>

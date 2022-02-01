@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="plan_100" model="ix.plan">
+            <field name="name">Plan 100</field>
+            <field name="active" eval="True"/>
+            <field name="amount">100</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 100.png"/>
+        </record>
+
+        <record id="plan_300" model="ix.plan">
+            <field name="name">Plan 300</field>
+            <field name="active" eval="True"/>
+            <field name="amount">300</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 300.png"/>
+        </record>
+
+        <record id="plan_500" model="ix.plan">
+            <field name="name">Plan 500</field>
+            <field name="active" eval="True"/>
+            <field name="amount">500</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 500.png"/>
+        </record>
+
+        <record id="plan_1000" model="ix.plan">
+            <field name="name">Plan 1000</field>
+            <field name="active" eval="True"/>
+            <field name="amount">1000</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 1000.png"/>
+        </record>
+
+        <record id="plan_2000" model="ix.plan">
+            <field name="name">Plan 2000</field>
+            <field name="active" eval="True"/>
+            <field name="amount">2000</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 2000.png"/>
+        </record>
+
+        <record id="plan_3000" model="ix.plan">
+            <field name="name">Plan 3000</field>
+            <field name="active" eval="True"/>
+            <field name="amount">3000</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 3000.png"/>
+        </record>
+
+        <record id="plan_5000" model="ix.plan">
+            <field name="name">Plan 5000</field>
+            <field name="active" eval="True"/>
+            <field name="amount">5000</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 5000.png"/>
+        </record>
+
+        <record id="plan_10000" model="ix.plan">
+            <field name="name">Plan 10000</field>
+            <field name="active" eval="True"/>
+            <field name="amount">10000</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 10000.png"/>
+        </record>
+
+        <record id="plan_20000" model="ix.plan">
+            <field name="name">Plan 20000</field>
+            <field name="active" eval="True"/>
+            <field name="amount">20000</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 20000.png"/>
+        </record>
+
+        <record id="plan_30000" model="ix.plan">
+            <field name="name">Plan 30000</field>
+            <field name="active" eval="True"/>
+            <field name="amount">30000</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 30000.png"/>
+        </record>
+
+        <record id="plan_40000" model="ix.plan">
+            <field name="name">Plan 40000</field>
+            <field name="active" eval="True"/>
+            <field name="amount">40000</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 40000.png"/>
+        </record>
+
+        <record id="plan_50000" model="ix.plan">
+            <field name="name">Plan 50000</field>
+            <field name="active" eval="True"/>
+            <field name="amount">50000</field>
+            <field name="image_1920" type="base64" file="ix_inversors_account/static/img/plans/IX 50000.png"/>
+        </record>
+    </data>
+</odoo>

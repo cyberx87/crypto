@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Crypto Wallet-->
+    <record id="view_ix_crypto_wallet_search" model="ir.ui.view">
+        <field name="name">Crypto Wallet Search</field>
+        <field name="model">ix.crypto.wallet</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="path"/>
+                <field name="exchange_id"/>
+                <field name="currency_id"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="group_by_exchange_id" string="Exchange"
+                            context="{'group_by':'exchange_id'}"/>
+                    <filter name="group_by_currency_id" string="Currency"
+                            context="{'group_by':'currency_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_ix_crypto_wallet_tree" model="ir.ui.view">
+        <field name="name">Crypto Wallet Tree</field>
+        <field name="model">ix.crypto.wallet</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="path"/>
+                <field name="exchange_id"/>
+                <field name="currency_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ix_crypto_wallet_form" model="ir.ui.view">
+        <field name="name">Crypto Wallet Form</field>
+        <field name="model">ix.crypto.wallet</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" class="oe_inline" default_focus="1" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="path"/>
+                            <field name="currency_id"/>
+                        </group>
+                        <group>
+                            <field name="exchange_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ix_crypto_wallet" model="ir.actions.act_window">
+        <field name="name">Crypto Wallet</field>
+        <field name="res_model">ix.crypto.wallet</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--Crypto Currency-->
+    <record id="view_ix_crypto_currency_search" model="ir.ui.view">
+        <field name="name">Crypto Currency Search</field>
+        <field name="model">ix.crypto.currency</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="short_name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_ix_crypto_currency_tree" model="ir.ui.view">
+        <field name="name">Crypto Currency Tree</field>
+        <field name="model">ix.crypto.currency</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="short_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ix_crypto_currency_form" model="ir.ui.view">
+        <field name="name">Crypto Currency Form</field>
+        <field name="model">ix.crypto.currency</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" class="oe_inline" default_focus="1" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="short_name"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ix_crypto_currency" model="ir.actions.act_window">
+        <field name="name">Crypto Currency</field>
+        <field name="res_model">ix.crypto.currency</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--Crypto Exchange-->
+    <record id="view_ix_crypto_exchange_search" model="ir.ui.view">
+        <field name="name">Crypto Exchange Search</field>
+        <field name="model">ix.crypto.exchange</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_ix_crypto_exchange_tree" model="ir.ui.view">
+        <field name="name">Crypto Exchange Tree</field>
+        <field name="model">ix.crypto.exchange</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="wallet_ids"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ix_crypto_exchange_form" model="ir.ui.view">
+        <field name="name">Crypto Exchange Form</field>
+        <field name="model">ix.crypto.exchange</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" class="oe_inline" default_focus="1" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group string="Wallets">
+                        <field name="wallet_ids" nolabel="1"/>
+                    </group>
+                    <field name="description" placeholder="Any description here..."/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ix_crypto_exchange" model="ir.actions.act_window">
+        <field name="name">Crypto Exchange</field>
+        <field name="res_model">ix.crypto.exchange</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
