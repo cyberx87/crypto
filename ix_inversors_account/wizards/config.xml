@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ix_config_wizard_form" model="ir.ui.view">
+        <field name="name">Configuration</field>
+        <field name="model">ix.config.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Main Config Settings">
+                <group>
+                    <button name="update_all_inversions" type="object" icon="fa-cogs"
+                            string="Update Inversion Data" class="p-0 btn-link"/>
+                    <button name="register_payment_all" type="object" icon="fa-cogs"
+                            string="Update All Payment" class="p-0 btn-link"
+                            confirm="This operation override all dates payment. Do you still want to proceed?"/>
+                    <span>Update all inversion and recalculate all inversion data.</span>
+                    <span>Register all dates payment for all inversion after valid creation date for each inversion</span>
+                </group>
+                <footer>
+                    <button string="Cancel" class="oe_link float-right" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="ix_config_wizard_action" model="ir.actions.act_window">
+        <field name="name">Configuration</field>
+        <field name="res_model">ix.config.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

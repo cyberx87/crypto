@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ix_info_view_partner_form" model="ir.ui.view">
+            <field name="name">ix.res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <!-- margins fields -->
+                <notebook position="inside">
+                    <page string="IX Info" attrs="{'invisible': [('type', '!=', 'contact')]}">
+                        <group>
+                            <group>
+                                <field name="user_name"/>
+                                <field name="lastname_father"/>
+                                <field name="lastname_mother"/>
+                            </group>
+                            <group>
+                                <field name="birthdate"/>
+                                <field name="identifier"/>
+                                <field name="ix_user_ids" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>

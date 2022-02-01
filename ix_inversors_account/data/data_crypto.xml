@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Currencies-->
+        <record id="currency_btc" model="ix.crypto.currency">
+            <field name="name">Bitcoin</field>
+            <field name="short_name">BTC</field>
+        </record>
+        <record id="currency_trx" model="ix.crypto.currency">
+            <field name="name">Theter</field>
+            <field name="short_name">USDT-TRC20</field>
+        </record>
+        <!--Exchanges-->
+        <record id="exchange_trust_wallet" model="ix.crypto.exchange">
+            <field name="name">Trust Wallet</field>
+        </record>
+        <record id="exchange_kucoin" model="ix.crypto.exchange">
+            <field name="name">Kucoin</field>
+        </record>
+        <record id="exchange_pionex" model="ix.crypto.exchange">
+            <field name="name">Pionex</field>
+        </record>
+        <record id="exchange_safepal" model="ix.crypto.exchange">
+            <field name="name">SafePal</field>
+        </record>
+        <record id="exchange_binx" model="ix.crypto.exchange">
+            <field name="name">BingX</field>
+        </record>
+    </data>
+</odoo>

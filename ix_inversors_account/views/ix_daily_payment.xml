@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Res partner efo-->
+        <record id="view_ix_daily_payment_search" model="ir.ui.view">
+            <field name="name">ix.daily.payment.search</field>
+            <field name="model">ix.daily.payment</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="display_name"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_date" string="Date"
+                                context="{'group_by':'date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_ix_daily_payment_tree" model="ir.ui.view">
+            <field name="name">ix.daily.payment.form</field>
+            <field name="model">ix.daily.payment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="display_name"/>
+                    <field name="date"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ix_daily_payment_form" model="ir.ui.view">
+            <field name="name">ix.daily.payment.form</field>
+            <field name="model">ix.daily.payment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="register_payment" type="object" string="Update Payment"
+                                icon="fa-arrow-right" class="p-0 btn-link"/>
+                    </header>
+                    <sheet>
+                        <field name="image_1920" widget="image" class="oe_avatar" nolabel="1"
+                               options="{&quot;preview_image&quot;: &quot;image_128&quot;}"/>
+                        <div class="oe_button_box" name="button_box"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="display_name"/>
+                            </h1>
+                        </div>
+                        <group col="4">
+                            <field name="name" default_focus="1" placeholder="Today Payment % (Ex: 1.0)"/>
+                            <field name="date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_ix_daily_payment_calendar" model="ir.ui.view">
+            <field name="name">ix.daily.payment.calendar</field>
+            <field name="model">ix.daily.payment</field>
+            <field name="arch" type="xml">
+                <calendar string="Daily Payment" date_start="date" color="color" mode="month" event_limit="1">
+                    <field name="name"/>
+                    <field name="date"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="action_ix_daily_payment" model="ir.actions.act_window">
+            <field name="name">Daily Payment</field>
+            <field name="res_model">ix.daily.payment</field>
+            <field name="view_mode">calendar,tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Top menu item -->
+        <menuitem id="ix_inversors_account.menu_main"
+                  name="IX-Inversors" sequence="35"
+                  web_icon="ix_inversors_account,static/description/icon.png"
+                  groups="base.group_user,base.group_system">
+            <menuitem id="ix_inversors_account.menu_users"
+                      name="Users" sequence="1"
+                      action="ix_inversors_account.action_ix_user"
+                      groups="base.group_user,base.group_system"/>
+            <menuitem id="ix_inversors_account.menu_ix_daily_payment"
+                      name="Daily Payment" sequence="2"
+                      action="ix_inversors_account.action_ix_daily_payment"
+                      groups="base.group_user,base.group_system"/>
+            <menuitem id="ix_inversors_account.menu_inversion_main"
+                      name="Inversions" sequence="3"
+                      groups="base.group_user,base.group_system">
+                <menuitem id="ix_inversors_account.menu_inversion"
+                          name="Inversions" sequence="1"
+                          action="ix_inversors_account.action_ix_inversion"
+                          groups="base.group_user,base.group_system"/>
+                <menuitem id="ix_inversors_account.menu_inversion_line"
+                          name="Inversion Lines" sequence="2"
+                          action="ix_inversors_account.action_ix_inversion_line"
+                          groups="base.group_user,base.group_system"/>
+            </menuitem>
+            <menuitem id="ix_inversors_account.menu_configuration"
+                      name="Configuration" sequence="100"
+                      groups="base.group_user,base.group_system">
+                <menuitem id="ix_inversors_account.config_wizard"
+                          name="Configuration" sequence="1"
+                          action="ix_inversors_account.ix_config_wizard_action"
+                          groups="base.group_user,base.group_system"/>
+                <menuitem id="ix_inversors_account.menu_plan"
+                          name="Plans" sequence="3"
+                          action="ix_inversors_account.action_ix_plan"
+                          groups="base.group_user,base.group_system"/>
+                <menuitem id="ix_inversors_account.menu_configuration_crypto"
+                          name="Crypto Configuration" sequence="10"
+                          groups="base.group_user,base.group_system">
+                    <menuitem id="ix_inversors_account.menu_crypto_wallet"
+                              name="Crypto Wallets" sequence="1"
+                              action="ix_inversors_account.action_ix_crypto_wallet"
+                              groups="base.group_user,base.group_system"/>
+                    <menuitem id="ix_inversors_account.menu_crypto_currency"
+                              name="Crypto Currencies" sequence="2"
+                              action="ix_inversors_account.action_ix_crypto_currency"
+                              groups="base.group_user,base.group_system"/>
+                    <menuitem id="ix_inversors_account.menu_crypto_exchange"
+                              name="Crypto Exchange" sequence="3"
+                              action="ix_inversors_account.action_ix_crypto_exchange"
+                              groups="base.group_user,base.group_system"/>
+                </menuitem>
+            </menuitem>
+        </menuitem>
+    </data>
+</odoo>

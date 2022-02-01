@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--ix.inversion lines-->
+        <record id="view_ix_inversion_line_search" model="ir.ui.view">
+            <field name="name">ix.inversion.line.search</field>
+            <field name="model">ix.inversion.line</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="date"/>
+                    <field name="user_id"/>
+                    <field name="user_from"/>
+                    <field name="amount_type"/>
+                    <field name="active"/>
+                    <separator/>
+                    <filter name="filter_daily_bonus" string="Daily Bonus"
+                            domain="[('amount_type', '=', 'daily bonus')]"/>
+                    <filter name="filter_binary_bonus" string="Binary Bonus"
+                            domain="[('amount_type', '=', 'binary bonus')]"/>
+                    <filter name="filter_sponsor_commission" string="Sponsor Commission"
+                            domain="[('amount_type', '=', 'sponsor commission')]"/>
+                    <separator/>
+                    <filter name="filter_payout_released" string="Payout Released"
+                            domain="[('amount_type', '=', 'Payout released'), ('state_payment', '!=', 'pending')]"/>
+                    <filter name="filter_payout_pending" string="Payout Pending"
+                            domain="[('state_payment', '=', 'pending')]"/>
+                    <separator/>
+                    <filter name="filter_archived" string="Archived"
+                            domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_user_id" string="User"
+                                context="{'group_by':'user_id'}"/>
+                        <filter name="group_by_user_from" string="User From"
+                                context="{'group_by':'user_from'}"/>
+                        <filter name="group_by_inversion_id" string="Inversion"
+                                context="{'group_by':'inversion_id'}"/>
+                        <filter name="group_by_amount_type" string="Amount Type"
+                                context="{'group_by':'amount_type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_ix_inversion_line_tree" model="ir.ui.view">
+            <field name="name">ix.inversion.line.form</field>
+            <field name="model">ix.inversion.line</field>
+            <field name="arch" type="xml">
+                <tree decoration-muted="active==False"
+                      decoration-danger="state_payment=='pending'"
+                      decoration-info="amount_type=='Payout released' and state_payment=='done'">
+                    <field name="user_id"/>
+                    <field name="user_from"/>
+                    <field name="date"/>
+                    <field name="amount_credit" sum="Total Debit"/>
+                    <field name="amount_debit" sum="Total Debit"/>
+                    <field name="amount_type"/>
+                    <field name="active" invisible="1"/>
+                    <field name="state_payment" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ix_inversion_line_form" model="ir.ui.view">
+            <field name="name">ix.inversion.line.form</field>
+            <field name="model">ix.inversion.line</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="amount_type" widget="statusbar"
+                               statusbar_visible="daily bonus,binary bonus,sponsor commission,Payout released"/>
+                    </header>
+                    <sheet>
+                        <field name="amount_is_debit" invisible="1"/>
+                        <div class="oe_button_box" name="button_box"/>
+                        <div class="oe_title">
+                            <label for="date" class="oe_edit_only"/>
+                            <h1>
+                                <field name="date" class="oe_inline" default_focus="1" placeholder="Date"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="inversion_id"/>
+                                <field name="user_id"/>
+                                <field name="user_from"/>
+                                <field name="state_payment" widget="statusbar" statusbar_visible="pending,done" clickable="1"
+                                       attrs="{'readonly': [('amount_type', '!=', 'Payout released')]}"/>
+                            </group>
+                            <group class="oe_subtotal_footer" style="width: 40%!important;">
+                                <div class="oe_subtotal_footer_separator" colspan="2"/>
+                                <field name="amount_credit" attrs="{'readonly': [('amount_is_debit', '=', True)]}"/>
+                                <field name="amount_debit" attrs="{'readonly': [('amount_is_debit', '=', False)]}"/>
+                                <field name="amount_payment_fee" attrs="{'invisible': [('amount_type', '!=', 'Payout released')]}"/>
+
+
+                                <field name="amount_total" class="oe_subtotal_footer_separator"
+                                       widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_ix_inversion_line_calendar" model="ir.ui.view">
+            <field name="name">ix.inversion.line.calendar</field>
+            <field name="model">ix.inversion.line</field>
+            <field name="arch" type="xml">
+                <calendar string="Inversions" date_start="date" color="user_id" mode="month">
+                    <field name="inversion_id"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="view_ix_inversion_line_pivot" model="ir.ui.view">
+            <field name="name">ix.inversion.line.pivot</field>
+            <field name="model">ix.inversion.line</field>
+            <field name="arch" type="xml">
+                <pivot string="Inversions Lines Analysis" sample="1">
+                    <field name="inversion_id" type="row"/>
+                    <field name="amount_credit" type="measure"/>
+                    <field name="amount_debit" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="action_ix_inversion_line" model="ir.actions.act_window">
+            <field name="name">Inversions</field>
+            <field name="res_model">ix.inversion.line</field>
+            <field name="view_mode">pivot,tree,calendar,form</field>
+            <field name="context">{
+                'search_default_group_by_inversion_id': 1}
+            </field>
+        </record>
+
+        <record id="action_ix_inversion_line_all" model="ir.actions.act_window">
+            <field name="name">Create Payout</field>
+            <field name="res_model">ix.inversion.line</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!--ix.inversion-->
+        <record id="view_ix_inversion_search" model="ir.ui.view">
+            <field name="name">ix.inversion.search</field>
+            <field name="model">ix.inversion</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="user_id"/>
+                    <field name="plan_id"/>
+                    <field name="user_owner_id"/>
+                    <filter name="filter_available_payment" string="Available Payment"
+                            domain="[('amount_can_pay', '=', True)]"/>
+                    <filter name="filter_has_pending_payments" string="Pending Payment"
+                            domain="[('has_pending_payments', '=', True)]"/>
+                    <separator/>
+                    <filter name="filter_archived" string="Archived"
+                            domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_user_id" string="User"
+                                context="{'group_by':'user_id'}"/>
+                        <filter name="group_by_plan_id" string="Purchase Plan"
+                                context="{'group_by':'plan_id'}"/>
+                        <filter name="group_by_user_owner_id" string="Owner"
+                                context="{'group_by':'user_owner_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_ix_inversion_tree" model="ir.ui.view">
+            <field name="name">ix.inversion.form</field>
+            <field name="model">ix.inversion</field>
+            <field name="arch" type="xml">
+                <tree decoration-muted="not active" decoration-info="amount_can_pay">
+                    <field name="amount_can_pay" invisible="1"/>
+                    <field name="same_plan_count" invisible="1"/>
+                    <field name="user_id"/>
+                    <field name="user_owner_id" optional="hide"/>
+                    <field name="plan_id"/>
+                    <field name="currency_id" optional="hide"/>
+                    <field name="date_start" optional="show"/>
+                    <field name="type" optional="show"/>
+                    <field name="parent_id" optional="hide"/>
+                    <field name="amount_plan_purchase_fee" widget="monetary" options="{'currency_field': 'currency_id'}" optional="hide"/>
+                    <field name="amount_sponsor" widget="monetary" options="{'currency_field': 'currency_id'}" optional="hide"/>
+                    <field name="amount_binary" widget="monetary" options="{'currency_field': 'currency_id'}" optional="hide"/>
+                    <field name="amount_daily" widget="monetary" options="{'currency_field': 'currency_id'}" optional="hide"/>
+                    <field name="amount_maximum" widget="monetary" options="{'currency_field': 'currency_id'}" optional="hide"/>
+                    <field name="amount_total_payment" widget="monetary" options="{'currency_field': 'currency_id'}" optional="hide"/>
+                    <field name="amount_available" string="$ Available" widget="monetary" options="{'currency_field': 'currency_id'}" optional="show"/>
+                    <field name="amount_payout_fee" widget="monetary" options="{'currency_field': 'currency_id'}" optional="hide"/>
+                    <field name="amount_payout" widget="monetary" options="{'currency_field': 'currency_id'}" optional="hide"/>
+                    <field name="amount_plan_purchase" widget="monetary" options="{'currency_field': 'currency_id'}" optional="show"/>
+                    <field name="amount_gain" options="{'currency_field': 'currency_id'}" optional="show"/>
+                    <field name="amount_maximum" widget="progressbar" options="{'current_value': 'amount_total_payment', 'max_value': 'amount_maximum', 'editable': false}" optional="show"/>
+                    <field name="amount_total_left" widget="monetary" options="{'currency_field': 'currency_id'}" optional="show"/>
+                    <field name="active" widget="boolean_toggle" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ix_inversion_form" model="ir.ui.view">
+            <field name="name">ix.inversion.form</field>
+            <field name="model">ix.inversion</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="type" widget="statusbar"/>
+                        <button name="%(action_ix_inversion_line_all)d" string="Add Payout" type="action" class="oe_highlight"
+                                attrs="{'invisible': ['|', ('active', '=', False),('amount_can_pay', '=', False)]}" icon="fa-plus-circle"
+                                context="{'default_user_id': user_id,
+                                          'default_inversion_id': active_id,
+                                          'default_amount_type':'Payout released',
+                                          'default_state_payment':'pending',
+                                          'default_user_from': 'AdminUser'}"/>
+                        <button name="%(action_ix_inversion_line_all)d" string="Add Binary Bonus" type="action"
+                                attrs="{'invisible': [('active','=',False)]}" icon="fa-plus-circle"
+                                context="{'default_user_id': user_id,
+                                          'default_inversion_id': active_id,
+                                          'default_amount_type':'binary bonus',
+                                          'default_user_from': 'AdminUser'}"/>/>
+                        <button name="%(action_ix_inversion_line_all)d" string="Add Sponsor Commission" type="action"
+                                attrs="{'invisible': [('active','=',False)]}" icon="fa-plus-circle"
+                                context="{'default_user_id': user_id,
+                                          'default_inversion_id': active_id,
+                                          'default_amount_type':'sponsor commission',
+                                          'default_user_from': '',}"/>
+                        <button name="%(action_ix_inversion_line_all)d" string="Add Daily Bonus" type="action"
+                                attrs="{'invisible': [('active','=',False)]}" icon="fa-plus-circle"
+                                context="{'default_user_id': user_id,
+                                          'default_inversion_id': active_id,
+                                          'default_amount_type':'daily bonus',
+                                          'default_user_from': 'AdminUser'}"/>
+                        <button name="fill_ix_daily_payment" string="Update Daily Payments" type="object" attrs="{'invisible': [('active','=',False)]}"/>
+                    </header>
+                    <sheet>
+                        <field name="id" invisible="1"/>
+                        <field name="amount_plan" invisible="1"/>
+                        <div class="oe_button_box" name="button_box"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                        <widget name="web_ribbon" title="Ready to Payment" attrs="{'invisible': ['|', ('active', '=', False),('amount_can_pay', '=', False)]}"/>
+                        <!--                        <field name="image_1920" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_128&quot;}"/>-->
+                        <field name="image_1920" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_128&quot;}"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                            <h2>
+                                <field name="amount_payment_per" widget="progressbar"/>
+                            </h2>
+                        </div>
+                        <group col="3">
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="parent_id" readonly="1" attrs="{'invisible': [('parent_id', '=', False)]}"/>
+                                <field name="user_id"/>
+                                <field name="user_owner_id"/>
+                                <label for="plan_id"/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="plan_id"/>
+                                        </td>
+                                        <td>
+                                            <field name="currency_id" style="margin-left: 30px;"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <field name="date_start"/>
+                                <field name="payment_type" widget="radio" options="{'horizontal': True}"/>
+                                <field name="same_plan_count"/>
+                                <field name="amount_plan_purchase_fee" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_can_pay" invisible="1"/>
+                            </group>
+
+                            <group class="oe_subtotal_footer" string="Payments" name="all_payments" style="margin-left: 50px; text-align: center;">
+                                <div class="oe_subtotal_footer_separator" colspan="2"/>
+                                <field name="amount_sponsor" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_binary" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_daily" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+
+                                <field name="amount_total_payment_before" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_total_payment" widget="monetary"
+                                       class="oe_subtotal_footer_separator oe_inline"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_total_left" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                <label for="amount_maximum" class="oe_subtotal_footer_separator"/>
+                                <field name="amount_maximum" widget="monetary" nolabel="1" string="Total"
+                                       options="{'currency_field': 'currency_id'}"
+                                       class="oe_subtotal_footer_separator"/>
+                            </group>
+
+                            <group class="oe_subtotal_footer" string="Finances" name="all_payments" style="text-align: center;">
+                                <div class="oe_subtotal_footer_separator" colspan="2"/>
+                                <field name="amount_total_payment" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_available" widget="monetary" string="Available (-)"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_payout_fee" widget="monetary" string="Payout Fee (-)"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_error" widget="monetary" string="Reduced Fee (-)"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_payout_parent" widget="monetary" string="Parent Payouts (+)"
+                                       options="{'currency_field': 'currency_id'}"
+                                       attrs="{'invisible': [('amount_payout_parent', '=', 0)]}"/>
+                                <field name="amount_payout" class="oe_subtotal_footer_separator"
+                                       widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_plan_purchase" widget="monetary" string="Plan Purchase (-)"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <label for="amount_gain" class="oe_subtotal_footer_separator"/>
+                                <field name="amount_gain" class="oe_subtotal_footer_separator" nolabel="1"
+                                       options="{'currency_field': 'currency_id'}"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Payments">
+                                <field name="line_ids"
+                                       context="{'default_user_id': user_id,
+                                         'default_inversion_id': id}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ix_inversion_kanban_view" model="ir.ui.view">
+            <field name="name">ix.inversion.kanban</field>
+            <field name="model">ix.inversion</field>
+            <field name="arch" type="xml">
+                <kanban class="o_res_partner_kanban" sample="1">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="amount_maximum"/>
+                    <field name="amount_total_payment"/>
+                    <field name="amount_payout"/>
+                    <field name="amount_total_left"/>
+                    <field name="amount_available"/>
+                    <field name="amount_can_pay"/>
+                    <field name="amount_payout_fee"/>
+                    <field name="amount_gain"/>
+                    <field name="amount_payment_per"/>
+                    <field name="active"/>
+                    <field name="image_128"/>
+                    <field name="user_image_128"/>
+                    <field name="currency_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban"
+                                 t-attf-style="background-color: {{record.amount_payment_per.raw_value &gt;= 90 and 'lightcoral' or record.amount_gain.raw_value &gt;= 0 and 'greenyellow' or 'transparent'}};">
+                                <t t-set="placeholder" t-value="'/base/static/img/company_image.png'"/>
+                                <div class="o_kanban_image_fill_left o_kanban_image_full  rounded-circle"
+                                     t-attf-style="background-image: url(#{kanban_image('ix.inversion', 'user_image_128', record.id.raw_value, placeholder)})" role="img"/>
+                                <div class="oe_kanban_details d-flex flex-column">
+                                    <strong class="o_kanban_record_title oe_partner_heading">
+                                        <t t-esc="record.user_id.value"/>
+                                        (<field name="amount_payment_per"/>%)
+                                    </strong>
+
+                                    <strong style="float: right; position: absolute; right: 9px; top: 5px;">
+                                        <span class="float-right text-right"
+                                              t-attf-style="color: {{record.amount_can_pay.raw_value and 'green' or 'gray'}};
+                                                            border: 2px solid {{record.amount_can_pay.raw_value and 'green' or 'gray'}};
+                                                            padding: 1px; width: 50px; border-radius: 10px;
+                                                            background-color: {{record.amount_can_pay.raw_value and 'lightgreen' or 'lightgray'}};">
+                                            <field name="amount_available" widget="monetary"
+                                                   options="{'currency_field': 'currency_id'}"/>
+                                        </span>
+                                    </strong>
+
+                                    <div style="color: #666666!important;">
+                                        Left:
+                                        <field name="amount_total_left" widget="monetary"
+                                               options="{'currency_field': 'currency_id'}"/>
+                                    </div>
+                                    <div >
+                                        Gained:
+                                        <field name="amount_gain" widget="monetary"
+                                               options="{'currency_field': 'currency_id'}"/>
+                                    </div>
+
+                                    <div class="o_kanban_record_subtitle" style="width: 65%; padding: 0 3px 0 3px; border-radius: 5px;">
+                                        <field name="amount_total_payment" widget="progressbar"
+                                               options="{'current_value': 'amount_total_payment', 'max_value': 'amount_maximum', 'editable': false}"/>
+                                    </div>
+
+                                    <div class="o_kanban_image" role="img"
+                                         t-attf-style="background-image: url(#{kanban_image('ix.inversion', 'image_128', record.id.raw_value, placeholder)}); position: absolute; right: -25px; bottom: 5px; width: 60px; height: 25px; max-height: 40px; min-height: 60px;"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_ix_inversion_view_graph" model="ir.ui.view">
+            <field name="name">ix.inversion.graph</field>
+            <field name="model">ix.inversion</field>
+            <field name="arch" type="xml">
+                <graph string="Inversion Stats" type="pie">
+                    <field name="amount_sponsor"/>
+                    <field name="amount_binary"/>
+                    <field name="amount_daily" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="view_ix_inversion_pivot" model="ir.ui.view">
+            <field name="name">ix.inversion.pivot</field>
+            <field name="model">ix.inversion</field>
+            <field name="arch" type="xml">
+                <pivot string="Inversions Analysis" disable_linking="True" sample="1">
+                    <field name="user_id" type="col"/>
+                    <field name="amount_sponsor" type="measure"/>
+                    <field name="amount_binary" type="measure"/>
+                    <field name="amount_available" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="action_ix_inversion" model="ir.actions.act_window">
+            <field name="name">Inversions</field>
+            <field name="res_model">ix.inversion</field>
+            <field name="view_mode">kanban,tree,graph,form,pivot</field>
+        </record>
+    </data>
+</odoo>
